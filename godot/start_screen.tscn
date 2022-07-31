@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://start_screen.cs" type="Script" id=1]
 [ext_resource path="res://button_open_github.gd" type="Script" id=2]
 [ext_resource path="res://button_email_feedback.gd" type="Script" id=3]
 [ext_resource path="res://initialising.gd" type="Script" id=4]
+[ext_resource path="res://button_name.gd" type="Script" id=5]
 
 [node name="main_screen" type="Node2D"]
 script = ExtResource( 1 )
@@ -24,10 +25,11 @@ text = "Daily Action"
 [node name="welcome_title" type="RichTextLabel" parent="start_menu"]
 margin_left = 19.0
 margin_top = 22.0
-margin_right = 277.0
+margin_right = 1007.0
 margin_bottom = 53.0
 text = "Good morning, Jaap!
 "
+scroll_active = false
 
 [node name="button_open_github" type="Button" parent="start_menu"]
 margin_left = 98.0
@@ -45,5 +47,24 @@ margin_bottom = 157.0
 text = "Feedback"
 script = ExtResource( 3 )
 
+[node name="button_name" type="Button" parent="start_menu"]
+margin_left = 905.0
+margin_top = 19.0
+margin_right = 995.0
+margin_bottom = 56.0
+text = "Name"
+script = ExtResource( 5 )
+
+[node name="user_details" type="Node2D" parent="."]
+visible = false
+
+[node name="Button" type="Button" parent="user_details"]
+margin_left = 444.0
+margin_top = 279.0
+margin_right = 500.0
+margin_bottom = 316.0
+text = "OK"
+
 [connection signal="pressed" from="start_menu/button_open_github" to="start_menu/button_open_github" method="_on_button_open_github_pressed"]
 [connection signal="pressed" from="start_menu/button_email_feedback" to="start_menu/button_email_feedback" method="_on_button_email_feedback_pressed"]
+[connection signal="pressed" from="start_menu/button_name" to="start_menu/button_name" method="_on_button_name_pressed"]
