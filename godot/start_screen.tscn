@@ -1,16 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://start_screen.cs" type="Script" id=1]
 [ext_resource path="res://button_open_github.gd" type="Script" id=2]
 [ext_resource path="res://button_email_feedback.gd" type="Script" id=3]
+[ext_resource path="res://initialising.gd" type="Script" id=4]
 
-[node name="Node2D" type="Node2D"]
+[node name="main_screen" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
 [node name="start_menu" type="Node2D" parent="."]
+script = ExtResource( 4 )
 
 [node name="button_daily_action" type="Button" parent="start_menu"]
 margin_left = 51.0
@@ -19,7 +21,7 @@ margin_right = 140.0
 margin_bottom = 95.0
 text = "Daily Action"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="start_menu"]
+[node name="welcome_title" type="RichTextLabel" parent="start_menu"]
 margin_left = 19.0
 margin_top = 22.0
 margin_right = 277.0
