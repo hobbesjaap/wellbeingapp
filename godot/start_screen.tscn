@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://start_screen.cs" type="Script" id=1]
+[ext_resource path="res://button_open_github.gd" type="Script" id=2]
+[ext_resource path="res://button_email_feedback.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="start_menu" type="Node2D" parent="."]
+
+[node name="button_daily_action" type="Button" parent="start_menu"]
+margin_left = 51.0
+margin_top = 75.0
+margin_right = 140.0
+margin_bottom = 95.0
+text = "Daily Action"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="start_menu"]
+margin_left = 19.0
+margin_top = 22.0
+margin_right = 277.0
+margin_bottom = 53.0
+text = "Good morning, Jaap!
+"
+
+[node name="button_open_github" type="Button" parent="start_menu"]
+margin_left = 98.0
+margin_top = 195.0
+margin_right = 135.0
+margin_bottom = 215.0
+text = "URL"
+script = ExtResource( 2 )
+
+[node name="button_email_feedback" type="Button" parent="start_menu"]
+margin_left = 169.0
+margin_top = 137.0
+margin_right = 241.0
+margin_bottom = 157.0
+text = "Feedback"
+script = ExtResource( 3 )
+
+[connection signal="pressed" from="start_menu/button_open_github" to="start_menu/button_open_github" method="_on_button_open_github_pressed"]
+[connection signal="pressed" from="start_menu/button_email_feedback" to="start_menu/button_email_feedback" method="_on_button_email_feedback_pressed"]
