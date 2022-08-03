@@ -14,6 +14,10 @@ config/name="Wellbeing App"
 run/main_scene="res://start_screen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+UserValues="*res://user_values.gd"
+
 [gui]
 
 theme/use_hidpi=true

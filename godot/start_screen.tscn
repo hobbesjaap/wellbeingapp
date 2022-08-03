@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://start_screen.cs" type="Script" id=1]
+[ext_resource path="res://main_screen.gd" type="Script" id=1]
 [ext_resource path="res://button_open_github.gd" type="Script" id=2]
 [ext_resource path="res://button_email_feedback.gd" type="Script" id=3]
-[ext_resource path="res://initialising.gd" type="Script" id=4]
+[ext_resource path="res://start_menu.gd" type="Script" id=4]
 [ext_resource path="res://button_name.gd" type="Script" id=5]
+[ext_resource path="res://button_user_save.gd" type="Script" id=6]
 
 [node name="main_screen" type="Node2D"]
 script = ExtResource( 1 )
@@ -13,6 +14,7 @@ __meta__ = {
 }
 
 [node name="start_menu" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 4 )
 
 [node name="button_daily_action" type="Button" parent="start_menu"]
@@ -56,15 +58,29 @@ text = "Name"
 script = ExtResource( 5 )
 
 [node name="user_details" type="Node2D" parent="."]
-visible = false
 
-[node name="Button" type="Button" parent="user_details"]
+[node name="button_user_ok" type="Button" parent="user_details"]
 margin_left = 444.0
 margin_top = 279.0
 margin_right = 500.0
 margin_bottom = 316.0
 text = "OK"
 
+[node name="button_user_save" type="Button" parent="user_details"]
+margin_left = 540.0
+margin_top = 280.0
+margin_right = 615.0
+margin_bottom = 317.0
+text = "Save"
+script = ExtResource( 6 )
+
+[node name="textbox_user_name" type="LineEdit" parent="user_details"]
+margin_left = 244.0
+margin_top = 205.0
+margin_right = 794.0
+margin_bottom = 250.0
+
 [connection signal="pressed" from="start_menu/button_open_github" to="start_menu/button_open_github" method="_on_button_open_github_pressed"]
 [connection signal="pressed" from="start_menu/button_email_feedback" to="start_menu/button_email_feedback" method="_on_button_email_feedback_pressed"]
 [connection signal="pressed" from="start_menu/button_name" to="start_menu/button_name" method="_on_button_name_pressed"]
+[connection signal="pressed" from="user_details/button_user_save" to="user_details/button_user_save" method="_on_button_user_save_pressed"]
