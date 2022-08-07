@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 UserValues="*res://user_values.gd"
+ProgramValues="*res://program_values.gd"
 
 [gui]
 

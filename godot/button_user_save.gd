@@ -2,7 +2,8 @@ extends Button
 
 var config = ConfigFile.new()
 
-onready var user_name = get_node("user_details/textbox_user_name")
+onready var user_name = get_node("textbox_user_name")
+onready var user_info = get_node("/root/UserValues")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +17,7 @@ func _ready():
 func _on_button_user_save_pressed():
 
 # Store some values.
-	config.set_value("User", "player_name", "Steve")
+	config.set_value("User", "player_name", user_name)
 	config.set_value("Player1", "best_score", 10)
 	config.set_value("Player2", "player_name", "V3geta")
 	config.set_value("Player2", "best_score", 9001)
