@@ -20,6 +20,7 @@ func _ready():
 func _on_button_user_save_pressed():
 
 # Store some values.
+# Maybe this one only runs if there is no ini
 	config.set_value("User", "user_name", user_name.text)
 	user_info.user_first_name = user_name.text
 	#config.set_value("Player1", "best_score", 10)
@@ -27,8 +28,17 @@ func _on_button_user_save_pressed():
 	#config.set_value("Player2", "best_score", 9001)
 
 # Save it to a file (overwrite if already exists).
+# Need to make sure I never lose any values I add.
+# This seems to be a manual thing to program.
+# So per value, make sure to read it upon load.
+# And write it out again as well.
+
 	config.save("user://user.ini")
 	
 	main_screen.visible = true
 	start_menu.visible = true
 	user_menu.visible = false
+
+# Need to do a "This thing can't be empty" code
+# Most likely here. A if .text = null, then,
+# don't proceed.

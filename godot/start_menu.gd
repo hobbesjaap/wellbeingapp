@@ -13,7 +13,7 @@ func _process(_delta):
 
 
 func _on_button_update_check_pressed():
-	$HTTPRequest.request("https://raw.githubusercontent.com/hobbesjaap/wellbeingapp/main/version_stuff.csv")
+	$HTTPRequest.request("https://raw.githubusercontent.com/hobbesjaap/wellbeingapp/main/version_info.csv")
 
 
 func _on_HTTPRequest_request_completed(result, response_code, headers, body):
