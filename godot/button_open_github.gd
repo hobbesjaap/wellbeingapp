@@ -16,4 +16,4 @@ extends Button
 
 
 func _on_button_open_github_pressed():
-	OS.shell_open("https://godotengine.org")
+	OS.shell_open("https://github.com/hobbesjaap/wellbeingapp")

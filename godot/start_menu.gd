@@ -1,9 +1,6 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 onready var user_info = get_node("/root/UserValues")
 onready var program_info = get_node("/root/ProgramValues")
 
@@ -13,5 +10,6 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
+func _process(_delta):
+	$welcome_title.text = "Good morning " + user_info.user_first_name + "!"
 #	pass

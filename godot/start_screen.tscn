@@ -14,7 +14,6 @@ __meta__ = {
 }
 
 [node name="start_menu" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 4 )
 
 [node name="button_daily_action" type="Button" parent="start_menu"]
@@ -38,7 +37,7 @@ margin_left = 98.0
 margin_top = 195.0
 margin_right = 135.0
 margin_bottom = 215.0
-text = "URL"
+text = "GitHub"
 script = ExtResource( 2 )
 
 [node name="button_email_feedback" type="Button" parent="start_menu"]
@@ -58,23 +57,18 @@ text = "Name"
 script = ExtResource( 5 )
 
 [node name="user_details" type="Node2D" parent="."]
-
-[node name="button_user_ok" type="Button" parent="user_details"]
-margin_left = 444.0
-margin_top = 279.0
-margin_right = 500.0
-margin_bottom = 316.0
-text = "OK"
+visible = false
 
 [node name="button_user_save" type="Button" parent="user_details"]
 margin_left = 540.0
 margin_top = 280.0
 margin_right = 615.0
 margin_bottom = 317.0
-text = "Save"
+text = "OK"
 script = ExtResource( 6 )
 
 [node name="textbox_user_name" type="LineEdit" parent="user_details"]
+unique_name_in_owner = true
 margin_left = 244.0
 margin_top = 205.0
 margin_right = 794.0

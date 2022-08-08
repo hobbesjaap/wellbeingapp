@@ -2,8 +2,11 @@ extends Button
 
 var config = ConfigFile.new()
 
-onready var user_name = get_node("textbox_user_name")
+onready var user_name = get_node("%textbox_user_name")
 onready var user_info = get_node("/root/UserValues")
+onready var main_screen = get_node("/root/main_screen")
+onready var start_menu = get_node("/root/main_screen/start_menu")
+onready var user_menu = get_node("/root/main_screen/user_details")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,10 +20,15 @@ func _ready():
 func _on_button_user_save_pressed():
 
 # Store some values.
-	config.set_value("User", "player_name", user_name)
-	config.set_value("Player1", "best_score", 10)
-	config.set_value("Player2", "player_name", "V3geta")
-	config.set_value("Player2", "best_score", 9001)
+	config.set_value("User", "user_name", user_name.text)
+	user_info.user_first_name = user_name.text
+	#config.set_value("Player1", "best_score", 10)
+	#onfig.set_value("Player2", "player_name", "V3geta")
+	#config.set_value("Player2", "best_score", 9001)
 
 # Save it to a file (overwrite if already exists).
 	config.save("user://user.ini")
+	
+	main_screen.visible = true
+	start_menu.visible = true
+	user_menu.visible = false
