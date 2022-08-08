@@ -16,7 +16,9 @@ func _on_button_update_check_pressed():
 	$HTTPRequest.request("https://raw.githubusercontent.com/hobbesjaap/wellbeingapp/main/version_stuff.csv")
 
 
-#func _on_HTTPRequest_request_completed(result, response_code, headers, body):
-func _on_request_completed(result, response_code, headers, body):
+func _on_HTTPRequest_request_completed(result, response_code, headers, body):
+#func _on_request_completed(result, response_code, headers, body):
 	var json = JSON.parse(body.get_string_from_utf8())
 	program_info.web_release_version = json.result
+	if program_info.web_release_version > program_info.release_version:
+			print("There's an update!")
