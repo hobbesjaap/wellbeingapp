@@ -8,10 +8,11 @@ extends Node
 # download button if there is.
 
 var release_version = 1
+var web_release_version = 0
 
 func _ready():
 	pass
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

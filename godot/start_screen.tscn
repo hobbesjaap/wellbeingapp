@@ -56,6 +56,15 @@ margin_bottom = 56.0
 text = "Name"
 script = ExtResource( 5 )
 
+[node name="HTTPRequest" type="HTTPRequest" parent="start_menu"]
+
+[node name="button_update_check" type="Button" parent="start_menu"]
+margin_left = 658.0
+margin_top = 354.0
+margin_right = 880.0
+margin_bottom = 391.0
+text = "Check for Updates"
+
 [node name="user_details" type="Node2D" parent="."]
 visible = false
 
@@ -84,4 +93,6 @@ text = "Day"
 [connection signal="pressed" from="start_menu/button_open_github" to="start_menu/button_open_github" method="_on_button_open_github_pressed"]
 [connection signal="pressed" from="start_menu/button_email_feedback" to="start_menu/button_email_feedback" method="_on_button_email_feedback_pressed"]
 [connection signal="pressed" from="start_menu/button_name" to="start_menu/button_name" method="_on_button_name_pressed"]
+[connection signal="request_completed" from="start_menu/HTTPRequest" to="start_menu" method="_on_HTTPRequest_request_completed"]
+[connection signal="pressed" from="start_menu/button_update_check" to="start_menu" method="_on_button_update_check_pressed"]
 [connection signal="pressed" from="user_details/button_user_save" to="user_details/button_user_save" method="_on_button_user_save_pressed"]
