@@ -7,7 +7,7 @@ extends Node
 # there is a new version available and show a
 # download button if there is.
 
-var release_version = 1
+var release_version_online = 2
 
 func _ready():
 	pass
