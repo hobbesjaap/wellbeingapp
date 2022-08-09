@@ -9,6 +9,10 @@ extends Node
 
 var release_version = 1
 var web_release_version = 0
+var current_version = "Version 0.1"
+
+func check_update():
+	pass
 
 func _ready():
 	pass

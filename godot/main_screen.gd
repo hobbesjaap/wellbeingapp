@@ -1,12 +1,9 @@
-extends Node2D
+extends CanvasLayer
 
-onready var main_screen = get_node("/root/main_screen")
-onready var start_menu = get_node("/root/main_screen/start_menu")
-onready var user_menu = get_node("/root/main_screen/user_details")
+onready var ui_control = get_node("/root/UiControl")
 onready var user_name = get_node("%textbox_user_name")
 
 onready var user_info = get_node("/root/UserValues")
-onready var program_info = get_node("/root/ProgramValues")
 
 var config = ConfigFile.new()
 var err = config.load("user://user.ini")
@@ -17,16 +14,12 @@ func _ready():
 	# otherwise set up new user data
 
 	if err != OK:
-		start_menu.visible = false
-		user_menu.visible = true
+		ui_control.show_user_menu()
 		
 	else:
 
 	# Set starting state visibility
-	
-		main_screen.visible = true
-		start_menu.visible = true
-		user_menu.visible = false
+		ui_control.show_start_menu()
 		
 	# define variables from ini file
 		user_info.user_first_name = config.get_value("User", "user_name")
