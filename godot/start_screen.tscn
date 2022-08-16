@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://main_screen.gd" type="Script" id=1]
 [ext_resource path="res://user_details.tscn" type="PackedScene" id=2]
 [ext_resource path="res://start_menu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://apps/daily_prompts.tscn" type="PackedScene" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.862745, 0.435294, 0.329412, 1 )
@@ -39,6 +40,8 @@ margin_right = 1280.0
 [node name="start_menu" parent="UI/top_container/menus_container" instance=ExtResource( 3 )]
 
 [node name="user_details" parent="UI/top_container/menus_container" instance=ExtResource( 2 )]
+
+[node name="daily_prompts" parent="UI/top_container/menus_container" instance=ExtResource( 4 )]
 
 [node name="bottom_bar" type="Panel" parent="UI"]
 margin_top = 680.0

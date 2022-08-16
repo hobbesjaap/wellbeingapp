@@ -29,4 +29,13 @@ margin_bottom = 404.0
 focus_mode = 2
 text = "Day"
 
+[node name="label_first_time" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+margin_left = 211.0
+margin_top = 168.0
+margin_right = 832.0
+margin_bottom = 193.0
+text = "First time user: Please fill in your FIRST NAME only below."
+
 [connection signal="pressed" from="button_user_save" to="button_user_save" method="_on_button_user_save_pressed"]

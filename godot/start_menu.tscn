@@ -73,16 +73,15 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Journal"
 
-[node name="welcome_title" type="RichTextLabel" parent="."]
+[node name="welcome_title" type="Label" parent="."]
+unique_name_in_owner = true
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -185.0
 margin_top = 11.0
 margin_right = 185.0
 margin_bottom = 42.0
-text = "Good morning, Jaap!
-"
-scroll_active = false
+text = "Poofaces are cool"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
