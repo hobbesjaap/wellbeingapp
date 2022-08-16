@@ -6,7 +6,7 @@ onready var program_values = get_node("/root/ProgramValues")
 
 
 func _ready():
-	$version_label.text = str(program_values.current_version)
+	$version_label.text = "Version " + str(program_values.current_version)
 	$welcome_title.text = "Good morning, " + user_values.user_first_name + "!"
 
 

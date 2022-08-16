@@ -3,13 +3,15 @@ extends Node
 
 # This variable lists the release number.
 # This is "the number of releases".
-# My aim is to check against a web file to see if
-# there is a new version available and show a
-# download button if there is.
 
 var release_version = 1
+
+# The var web_release_version is pulled from GitHub
+# when the update button is checked. A higher value means
+# an update is available
+
 var web_release_version = 0
-var current_version = "Version 0.1"
+var current_version = "0.0.8"
 
 func check_update():
 	pass
