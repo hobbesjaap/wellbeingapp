@@ -1,8 +1,8 @@
 extends CanvasLayer
 
-onready var ui_control = get_node("/root/UiControl")
-onready var user_name = get_node("%textbox_user_name")
 
+onready var node_variables = get_node("/root/NodeVariables")
+onready var ui_control = get_node("/root/UiControl")
 onready var user_info = get_node("/root/UserValues")
 
 var config = ConfigFile.new()
@@ -23,7 +23,7 @@ func _ready():
 		
 	# define variables from ini file
 		user_info.user_first_name = config.get_value("User", "user_name")
-		user_name.text = user_info.user_first_name
+		node_variables.user_name.text = user_info.user_first_name
 
 # Iterate over all sections.
 #	for player in config.get_sections():

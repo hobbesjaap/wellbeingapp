@@ -18,4 +18,4 @@ func _ready():
 
 func _on_button_email_feedback_pressed():
 # warning-ignore:return_value_discarded
-	OS.shell_open("mailto:feedback@jaapmarsman.com")
+	var _error = OS.shell_open("mailto:feedback@jaapmarsman.com")

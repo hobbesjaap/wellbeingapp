@@ -1,16 +1,15 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://main_screen.gd" type="Script" id=1]
-[ext_resource path="res://button_open_github.gd" type="Script" id=2]
-[ext_resource path="res://button_email_feedback.gd" type="Script" id=3]
-[ext_resource path="res://start_menu.gd" type="Script" id=4]
-[ext_resource path="res://button_name.gd" type="Script" id=5]
-[ext_resource path="res://button_user_save.gd" type="Script" id=6]
-[ext_resource path="res://icons/noun-running-fox-4332379.svg" type="Texture" id=7]
+[ext_resource path="res://user_details.tscn" type="PackedScene" id=2]
+[ext_resource path="res://start_menu.tscn" type="PackedScene" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.862745, 0.435294, 0.329412, 1 )
 corner_radius_bottom_right = 45
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.462745, 0.662745, 0.560784, 1 )
 
 [node name="main_screen" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -22,121 +21,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.94902, 0.937255, 0.85098, 1 )
 
-[node name="top_container" type="VBoxContainer" parent="UI"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="top_bar" type="Panel" parent="UI/top_container"]
+[node name="top_bar" type="Panel" parent="UI"]
 margin_right = 1280.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 0, 50 )
 custom_styles/panel = SubResource( 1 )
 
-[node name="Noun-running-fox-4332380" type="Sprite" parent="UI/top_container"]
-position = Vector2( 54, 25 )
-texture = ExtResource( 7 )
-
-[node name="start_menu" type="CanvasLayer" parent="."]
-script = ExtResource( 4 )
-
-[node name="button_daily_action" type="Button" parent="start_menu"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -75.5
-margin_top = -48.0
-margin_right = 75.5
-margin_bottom = -11.0
-text = "Daily Action"
-
-[node name="welcome_title" type="RichTextLabel" parent="start_menu"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -185.0
-margin_top = 11.0
-margin_right = 185.0
-margin_bottom = 42.0
-text = "Good morning, Jaap!
-"
-scroll_active = false
-
-[node name="button_open_github" type="Button" parent="start_menu"]
-anchor_left = 1.0
-anchor_top = 1.0
+[node name="top_container" type="VBoxContainer" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -100.0
-margin_top = -37.0
-text = "GitHub"
-script = ExtResource( 2 )
+margin_top = 52.0
+margin_bottom = -41.0
 
-[node name="button_email_feedback" type="Button" parent="start_menu"]
-margin_left = 169.0
-margin_top = 137.0
-margin_right = 241.0
-margin_bottom = 157.0
-text = "Feedback"
-script = ExtResource( 3 )
+[node name="menus_container" type="VBoxContainer" parent="UI/top_container"]
+margin_right = 1280.0
 
-[node name="button_name" type="Button" parent="start_menu"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -138.0
-margin_top = 6.0
-margin_right = -48.0
-margin_bottom = 43.0
-text = "Name"
-script = ExtResource( 5 )
+[node name="start_menu" parent="UI/top_container/menus_container" instance=ExtResource( 3 )]
 
-[node name="HTTPRequest" type="HTTPRequest" parent="start_menu"]
+[node name="user_details" parent="UI/top_container/menus_container" instance=ExtResource( 2 )]
 
-[node name="button_update_check" type="Button" parent="start_menu"]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -222.0
-margin_top = -37.0
-text = "Check for Updates"
-
-[node name="version_label" type="Label" parent="start_menu"]
-anchor_top = 1.0
-anchor_bottom = 1.0
-margin_top = -25.0
-margin_right = 82.0
-text = "Version"
-
-[node name="user_details" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="button_user_save" type="Button" parent="user_details"]
-margin_left = 540.0
-margin_top = 280.0
-margin_right = 615.0
-margin_bottom = 317.0
-text = "OK"
-script = ExtResource( 6 )
-
-[node name="textbox_user_name" type="LineEdit" parent="user_details"]
-unique_name_in_owner = true
-margin_left = 244.0
-margin_top = 205.0
-margin_right = 794.0
-margin_bottom = 250.0
-caret_blink = true
-caret_blink_speed = 0.5
-
-[node name="button_birth_day" type="MenuButton" parent="user_details"]
-margin_left = 311.0
-margin_top = 367.0
-margin_right = 376.0
-margin_bottom = 404.0
-text = "Day"
-
-[connection signal="pressed" from="start_menu/button_open_github" to="start_menu/button_open_github" method="_on_button_open_github_pressed"]
-[connection signal="pressed" from="start_menu/button_email_feedback" to="start_menu/button_email_feedback" method="_on_button_email_feedback_pressed"]
-[connection signal="pressed" from="start_menu/button_name" to="start_menu/button_name" method="_on_button_name_pressed"]
-[connection signal="request_completed" from="start_menu/HTTPRequest" to="start_menu" method="_on_HTTPRequest_request_completed"]
-[connection signal="pressed" from="start_menu/button_update_check" to="start_menu" method="_on_button_update_check_pressed"]
-[connection signal="pressed" from="user_details/button_user_save" to="user_details/button_user_save" method="_on_button_user_save_pressed"]
+[node name="bottom_bar" type="Panel" parent="UI"]
+margin_top = 680.0
+margin_right = 1280.0
+margin_bottom = 720.0
+custom_styles/panel = SubResource( 2 )

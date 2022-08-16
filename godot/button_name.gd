@@ -5,9 +5,8 @@ extends Button
 
 # referencing nodes for menu switching
 
-onready var start_menu = get_node("/root/main_screen/start_menu")
-onready var user_details = get_node("/root/main_screen/user_details")
-
+onready var node_variables = get_node("/root/NodeVariables")
+onready var ui_control = get_node("/root/UiControl")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,6 +20,5 @@ func _ready():
 # makes the start menu disappear and the user menu appear
 
 func _on_button_name_pressed():
-	start_menu.visible = false
-	user_details.visible = true
+	ui_control.show_user_menu()
 	

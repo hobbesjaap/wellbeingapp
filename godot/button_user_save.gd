@@ -2,11 +2,9 @@ extends Button
 
 var config = ConfigFile.new()
 
-onready var user_name = get_node("%textbox_user_name")
+onready var node_variables = get_node("/root/NodeVariables")
 onready var user_info = get_node("/root/UserValues")
-onready var main_screen = get_node("/root/main_screen")
-onready var start_menu = get_node("/root/main_screen/start_menu")
-onready var user_menu = get_node("/root/main_screen/user_details")
+onready var user_name = get_node("%textbox_user_name")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,9 +33,9 @@ func _on_button_user_save_pressed():
 
 	config.save("user://user.ini")
 	
-	main_screen.visible = true
-	start_menu.visible = true
-	user_menu.visible = false
+	node_variables.main_screen.visible = true
+	node_variables.start_menu.visible = true
+	node_variables.user_menu.visible = false
 
 # Need to do a "This thing can't be empty" code
 # Most likely here. A if .text = null, then,

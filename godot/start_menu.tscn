@@ -1,0 +1,102 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://start_menu.gd" type="Script" id=1]
+[ext_resource path="res://button_name.gd" type="Script" id=2]
+[ext_resource path="res://button_email_feedback.gd" type="Script" id=3]
+[ext_resource path="res://button_open_github.gd" type="Script" id=4]
+
+[node name="start_menu" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 53.0
+margin_right = -943.0
+margin_bottom = -540.0
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+margin_right = 332.0
+margin_bottom = 127.0
+columns = 2
+
+[node name="button_daily_action" type="Button" parent="MarginContainer/GridContainer"]
+margin_right = 222.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Daily Action"
+
+[node name="button_open_github" type="Button" parent="MarginContainer/GridContainer"]
+margin_left = 230.0
+margin_right = 332.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "GitHub"
+script = ExtResource( 4 )
+
+[node name="button_email_feedback" type="Button" parent="MarginContainer/GridContainer"]
+margin_top = 45.0
+margin_right = 222.0
+margin_bottom = 82.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Feedback"
+script = ExtResource( 3 )
+
+[node name="button_name" type="Button" parent="MarginContainer/GridContainer"]
+margin_left = 230.0
+margin_top = 45.0
+margin_right = 332.0
+margin_bottom = 82.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Name"
+script = ExtResource( 2 )
+
+[node name="button_update_check" type="Button" parent="MarginContainer/GridContainer"]
+margin_top = 90.0
+margin_right = 222.0
+margin_bottom = 127.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Check for Updates"
+
+[node name="button_journal" type="Button" parent="MarginContainer/GridContainer"]
+margin_left = 230.0
+margin_top = 90.0
+margin_right = 332.0
+margin_bottom = 127.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Journal"
+
+[node name="welcome_title" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -185.0
+margin_top = 11.0
+margin_right = 185.0
+margin_bottom = 42.0
+text = "Good morning, Jaap!
+"
+scroll_active = false
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="version_label" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = -25.0
+margin_right = 1280.0
+margin_bottom = 5.0
+text = "Version"
+
+[connection signal="pressed" from="MarginContainer/GridContainer/button_open_github" to="MarginContainer/GridContainer/button_open_github" method="_on_button_open_github_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/button_email_feedback" to="MarginContainer/GridContainer/button_email_feedback" method="_on_button_email_feedback_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/button_name" to="MarginContainer/GridContainer/button_name" method="_on_button_name_pressed"]
+[connection signal="pressed" from="MarginContainer/GridContainer/button_update_check" to="." method="_on_button_update_check_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

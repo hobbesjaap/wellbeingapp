@@ -5,7 +5,6 @@ extends Button
 # var a = 2
 # var b = "text"
 
-
 # Called when the node enters the scene tree for the first time.
 #func _ready():
 #	pass
@@ -16,4 +15,4 @@ extends Button
 
 
 func _on_button_open_github_pressed():
-	OS.shell_open("https://github.com/hobbesjaap/wellbeingapp")
+	var _error = OS.shell_open("https://github.com/hobbesjaap/wellbeingapp")
