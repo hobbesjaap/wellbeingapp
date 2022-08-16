@@ -13,12 +13,6 @@ var release_version = 1
 var web_release_version = 0
 var current_version = "0.0.8"
 
-func check_update():
-	pass
 
 func _ready():
 	pass
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

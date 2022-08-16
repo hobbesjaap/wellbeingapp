@@ -11,12 +11,12 @@ func _ready():
 
 
 #func _process(_delta):
-#	Currently the only working way to show the user name. NOT desirable, continuously running the same line of code for no reason than me not figuring it out.
-#	$welcome_title.text = "Good morning, " + user_info.user_first_name + "!"
+#	pass
 
 
 func _on_button_update_check_pressed():
 	$HTTPRequest.request("https://raw.githubusercontent.com/hobbesjaap/wellbeingapp/main/version_info.csv")
+
 
 func update_user_name_label():
 	$welcome_title.text = "Good morning, " + user_values.user_first_name + "!"
