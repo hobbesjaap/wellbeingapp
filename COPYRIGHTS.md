@@ -16,7 +16,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Fonts (as part of Godot)
 
-Portions of this software are copyright © 2022 The FreeType Project (www.freetype.org). All rights reserved.
+Portions of this software are copyright © 2022 The FreeType Project (www.freetype.org). All rights reserved. The app uses the Noto font family, for which <a href="https://github.com/notofonts/noto-fonts/blob/main/LICENSE" target="_blank">the full license is available here</a>.
 
 ## Internet module Mbed TLS (as part of Godot)
 
