@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./godot/icons/main_icon_smaller.png">
+  <img src="./godot/icons/main_icon_smaller.png" size=400>
 </p>
 
 # Wellbeing App (currently unnamed)
