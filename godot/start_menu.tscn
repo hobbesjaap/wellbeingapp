@@ -81,7 +81,7 @@ margin_left = -185.0
 margin_top = 11.0
 margin_right = 185.0
 margin_bottom = 42.0
-text = "Poofaces are cool"
+text = "All your base are belong to us"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
@@ -89,9 +89,9 @@ text = "Poofaces are cool"
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_left = 5.0
-margin_top = -25.0
+margin_top = -29.0
 margin_right = 1280.0
-margin_bottom = 5.0
+margin_bottom = 1.0
 text = "Version"
 
 [connection signal="pressed" from="MarginContainer/GridContainer/button_open_github" to="MarginContainer/GridContainer/button_open_github" method="_on_button_open_github_pressed"]
