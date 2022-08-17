@@ -13,7 +13,7 @@ config_version=4
 config/name="Wellbeing App"
 run/main_scene="res://start_screen.tscn"
 run/low_processor_mode=true
-config/icon="res://icon.png"
+config/icon="res://Assets/icons/main_icon.png"
 
 [autoload]
 
