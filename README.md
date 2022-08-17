@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./godot/icons/main_icon_smaller.png">
+</p>
+
 # Wellbeing App (currently unnamed)
 
 A freeware and open source wellbeing app.
