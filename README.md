@@ -34,4 +34,5 @@ For an overview of all underlying licences, copyrights and attributions, please 
 ## References
 
 Ashman, G. (2018). The truth about teaching: An evidence-informed guide for new teachers. SAGE.
+
 Oishi, S., & Westgate, E. C. (2022). A psychologically rich life: Beyond happiness and meaning. Psychological Review, 129(4), 790–811. [https://doi.org/10.1037/rev0000317](https://doi.org/10.1037/rev0000317)
