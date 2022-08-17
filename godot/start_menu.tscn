@@ -18,9 +18,9 @@ unique_name_in_owner = true
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -185.0
-margin_top = 7.0
+margin_top = 2.0
 margin_right = 185.0
-margin_bottom = 38.0
+margin_bottom = 36.0
 theme = ExtResource( 5 )
 text = "All your base are belong to us"
 
