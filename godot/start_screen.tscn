@@ -24,25 +24,22 @@ color = Color( 0.94902, 0.937255, 0.85098, 1 )
 
 [node name="top_bar" type="Panel" parent="UI"]
 margin_right = 1280.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 0, 50 )
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
 custom_styles/panel = SubResource( 1 )
 
 [node name="top_container" type="VBoxContainer" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 52.0
-margin_bottom = -41.0
+margin_top = 42.0
+margin_bottom = -48.0
 
-[node name="menus_container" type="VBoxContainer" parent="UI/top_container"]
-margin_right = 1280.0
+[node name="start_menu" parent="UI/top_container" instance=ExtResource( 3 )]
 
-[node name="start_menu" parent="UI/top_container/menus_container" instance=ExtResource( 3 )]
-
-[node name="user_details" parent="UI/top_container/menus_container" instance=ExtResource( 2 )]
+[node name="user_details" parent="UI/top_container" instance=ExtResource( 2 )]
 visible = false
 
-[node name="daily_prompts" parent="UI/top_container/menus_container" instance=ExtResource( 4 )]
+[node name="daily_prompts" parent="UI/top_container" instance=ExtResource( 4 )]
 visible = false
 
 [node name="bottom_bar" type="Panel" parent="UI"]

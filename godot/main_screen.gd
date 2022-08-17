@@ -18,6 +18,7 @@ func _ready():
 
 	# Set starting state visibility
 		ui_control.show_start_menu()
+		node_variables.first_time_label.visible = false
 		
 	# define variables from ini file
 		node_variables.user_name.text = user_values.user_first_name

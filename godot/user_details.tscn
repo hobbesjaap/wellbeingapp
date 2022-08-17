@@ -4,38 +4,39 @@
 
 [node name="user_details" type="CanvasLayer"]
 
-[node name="button_user_save" type="Button" parent="."]
-margin_left = 540.0
-margin_top = 280.0
-margin_right = 615.0
-margin_bottom = 317.0
-text = "OK"
-script = ExtResource( 1 )
+[node name="user_menu" type="VBoxContainer" parent="."]
+margin_left = 10.0
+margin_top = 55.0
+margin_right = 1270.0
+margin_bottom = 665.0
+rect_min_size = Vector2( 1260, 610 )
 
-[node name="textbox_user_name" type="LineEdit" parent="."]
+[node name="label_first_time" type="Label" parent="user_menu"]
 unique_name_in_owner = true
-margin_left = 244.0
-margin_top = 205.0
-margin_right = 794.0
-margin_bottom = 250.0
+margin_right = 1260.0
+margin_bottom = 25.0
+text = "First time user: Please fill in your FIRST NAME only below."
+
+[node name="textbox_user_name" type="LineEdit" parent="user_menu"]
+unique_name_in_owner = true
+margin_top = 33.0
+margin_right = 1260.0
+margin_bottom = 78.0
 caret_blink = true
 caret_blink_speed = 0.5
 
-[node name="button_birth_day" type="MenuButton" parent="."]
-margin_left = 311.0
-margin_top = 367.0
-margin_right = 376.0
-margin_bottom = 404.0
+[node name="button_user_save" type="Button" parent="user_menu"]
+margin_top = 86.0
+margin_right = 1260.0
+margin_bottom = 123.0
+text = "OK"
+script = ExtResource( 1 )
+
+[node name="button_birth_day" type="MenuButton" parent="user_menu"]
+margin_top = 131.0
+margin_right = 1260.0
+margin_bottom = 168.0
 focus_mode = 2
 text = "Day"
 
-[node name="label_first_time" type="Label" parent="."]
-unique_name_in_owner = true
-visible = false
-margin_left = 211.0
-margin_top = 168.0
-margin_right = 832.0
-margin_bottom = 193.0
-text = "First time user: Please fill in your FIRST NAME only below."
-
-[connection signal="pressed" from="button_user_save" to="button_user_save" method="_on_button_user_save_pressed"]
+[connection signal="pressed" from="user_menu/button_user_save" to="user_menu/button_user_save" method="_on_button_user_save_pressed"]
