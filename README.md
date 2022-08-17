@@ -13,7 +13,7 @@ This app is being developed, researched and released using the following guiding
 
 ## Psychological Principles, Definitions and Criteria
 
-Equally important are the psychological principles guiding decisions around what to include in this app. Since many concepts have varying definitions I will keep an overview here.
+Equally important are the psychological principles that guide decisions about what to include in this app. Since many concepts have varying definitions I will keep an overview here.
 
 1. All activities and interventions available in the app will be *research-informed*. As explained by Ashman (2018), it is noted where evidence exists and where it does not, with decisions made accordingly. This approach acknowledges that, even where evidence exists, it may have other considerations, e.g. a very small number of participants or participants from a similar background or ethnicity.
 2. There is no conclusive definition of *wellbeing*. For the purposes of this app, wellbeing is seen not as a state or fixed endpoint. Similar to work-life balance, it is seen as something we must always strive to maintain. A number of *self-care* interventions can assist with this balancing.
