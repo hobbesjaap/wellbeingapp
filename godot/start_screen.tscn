@@ -37,9 +37,9 @@ margin_bottom = -48.0
 theme = ExtResource( 5 )
 
 [node name="start_menu" parent="UI/top_container" instance=ExtResource( 3 )]
+visible = false
 
 [node name="user_details" parent="UI/top_container" instance=ExtResource( 2 )]
-visible = false
 
 [node name="daily_prompts" parent="UI/top_container" instance=ExtResource( 4 )]
 visible = false

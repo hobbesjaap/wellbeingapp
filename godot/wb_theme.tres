@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=12 format=2]
+[gd_resource type="Theme" load_steps=14 format=2]
 
 [ext_resource path="res://Assets/fonts/noto_sans_display_bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/fonts/noto_sans_display.ttf" type="DynamicFontData" id=2]
@@ -22,7 +22,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.462745, 0.662745, 0.560784, 1 )
+bg_color = Color( 0.941176, 0.772549, 0.517647, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -59,6 +59,20 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.462745, 0.662745, 0.560784, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.207843, 0.219608, 0.317647, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
 [resource]
 Button/fonts/font = SubResource( 1 )
 Button/styles/disabled = SubResource( 4 )
@@ -69,3 +83,5 @@ Button/styles/pressed = SubResource( 7 )
 Label/fonts/font = SubResource( 3 )
 LineEdit/fonts/font = SubResource( 8 )
 LineEdit/styles/normal = SubResource( 9 )
+Panel/styles/panel = SubResource( 11 )
+PanelContainer/styles/panel = SubResource( 12 )
