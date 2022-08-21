@@ -37,25 +37,26 @@ theme = ExtResource( 5 )
 custom_fonts/font = SubResource( 1 )
 text = "Version"
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="GridContainer" type="HFlowContainer" parent="."]
 margin_left = 10.0
 margin_top = 55.0
 margin_right = 1270.0
 margin_bottom = 665.0
-columns = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="button_daily_action" type="Button" parent="GridContainer"]
-margin_right = 626.0
-margin_bottom = 198.0
+margin_right = 262.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 5 )
 text = "Daily Action"
 
 [node name="button_open_github" type="Button" parent="GridContainer"]
-margin_left = 634.0
-margin_right = 1260.0
-margin_bottom = 198.0
+margin_left = 270.0
+margin_right = 475.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 5 )
@@ -63,9 +64,9 @@ text = "GitHub"
 script = ExtResource( 4 )
 
 [node name="button_email_feedback" type="Button" parent="GridContainer"]
-margin_top = 206.0
-margin_right = 626.0
-margin_bottom = 404.0
+margin_left = 483.0
+margin_right = 715.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 5 )
@@ -73,10 +74,9 @@ text = "Feedback"
 script = ExtResource( 3 )
 
 [node name="button_name" type="Button" parent="GridContainer"]
-margin_left = 634.0
-margin_top = 206.0
-margin_right = 1260.0
-margin_bottom = 404.0
+margin_left = 723.0
+margin_right = 913.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 5 )
@@ -84,9 +84,9 @@ text = "Name"
 script = ExtResource( 2 )
 
 [node name="button_update_check" type="Button" parent="GridContainer"]
-margin_top = 412.0
-margin_right = 626.0
-margin_bottom = 610.0
+margin_left = 921.0
+margin_right = 1257.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 5 )

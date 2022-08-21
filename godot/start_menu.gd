@@ -4,6 +4,8 @@ extends CanvasLayer
 onready var user_values = get_node("/root/UserValues")
 onready var program_values = get_node("/root/ProgramValues")
 
+var csv_url = "https://raw.githubusercontent.com/hobbesjaap/wellbeingapp/main/version_info.csv"
+
 
 func _ready():
 	$version_label.text = "Version " + str(program_values.current_version)
@@ -15,7 +17,7 @@ func _ready():
 
 
 func _on_button_update_check_pressed():
-	$HTTPRequest.request("https://raw.githubusercontent.com/hobbesjaap/wellbeingapp/main/version_info.csv")
+	$HTTPRequest.request(csv_url)
 
 
 func update_user_name_label():
