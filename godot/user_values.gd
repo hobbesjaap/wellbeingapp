@@ -20,6 +20,8 @@ func _ready():
 	# define variables from ini file
 	if err == OK:
 		user_first_name = config.get_value("User", "user_name")
+		user_birth_month = config.get_value("User", "user_birth_month")
+		user_birth_day = config.get_value("User", "user_birth_day")
 		
 	else:
 		pass

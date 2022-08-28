@@ -20,6 +20,9 @@ func _on_button_user_save_pressed():
 		# Stores values in ini file
 		user_values.config.set_value("User", "user_name", user_name.text)
 		user_values.user_first_name = user_name.text
+		user_values.config.set_value("User", "user_birth_month", user_values.user_birth_month)
+		user_values.config.set_value("User", "user_birth_day", user_values.user_birth_day)
+
 		#config.set_value("Player1", "best_score", 10)
 		#onfig.set_value("Player2", "player_name", "V3geta")
 		#config.set_value("Player2", "best_score", 9001)
