@@ -6,10 +6,18 @@ onready var program_values = get_node("/root/ProgramValues")
 
 var csv_url = "https://raw.githubusercontent.com/hobbesjaap/wellbeingapp/main/version_info.csv"
 
+var welcome_day_part = " "
 
 func _ready():
 	$version_label.text = "Version " + str(program_values.current_version)
-	$welcome_title.text = "Good morning, " + user_values.user_first_name + "!"
+
+	user_values.get_device_time()
+	user_values.set_welcome_day_part()
+	
+	$welcome_title.text = user_values.welcome_day_part + user_values.user_first_name + "!"
+
+
+	
 
 
 #func _process(_delta):

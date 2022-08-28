@@ -35,5 +35,5 @@ func _on_button_user_save_pressed():
 
 		user_values.config.save("user://user.ini")
 		
-		node_variables.welcome_label.text = "Good morning, " + user_values.user_first_name + "!"
+		node_variables.welcome_label.text = user_values.welcome_day_part + user_values.user_first_name + "!"
 		ui_control.show_start_menu()

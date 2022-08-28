@@ -1,8 +1,21 @@
 extends Node
 
+# User values
+
 var user_first_name = " "
 var user_birth_month = 0
 var user_birth_day = 0
+
+# System time values
+
+var date
+var date_month
+var date_day
+
+var date_time
+var date_time_hour
+
+var welcome_day_part = " "
 
 # For the login-streak thing
 
@@ -15,7 +28,29 @@ var user_birth_day = 0
 var config = ConfigFile.new()
 var err = config.load("user://user.ini")
 
+# This function can be triggered to update the known system time.
+func get_device_time():
+	date = OS.get_date()
+	date_time = OS.get_time()
+	date_time_hour = date_time.hour
+	date_month = date.month
+	date_day = date.day
+	print(date_month)
+	print(date_day)
+	print(date_time_hour)
+
+func set_welcome_day_part():
+	if date_time_hour < 24:
+		welcome_day_part = "Good evening, "
+	if date_time_hour < 18:
+		welcome_day_part = "Good afternoon, "
+	if date_time_hour < 12:
+		welcome_day_part = "Good morning, "
+	if date_time_hour < 6:
+		welcome_day_part = "Good night, "
+
 func _ready():
+	get_device_time()
 	# Read config file if it exists
 	# define variables from ini file
 	if err == OK:
