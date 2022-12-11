@@ -9,7 +9,6 @@
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.862745, 0.435294, 0.329412, 1 )
-corner_radius_bottom_right = 45
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.462745, 0.662745, 0.560784, 1 )
@@ -38,6 +37,7 @@ margin_bottom = -48.0
 theme = ExtResource( 5 )
 
 [node name="start_menu" parent="UI/top_container" instance=ExtResource( 3 )]
+visible = false
 
 [node name="user_details" parent="UI/top_container" instance=ExtResource( 2 )]
 visible = false
@@ -46,6 +46,7 @@ visible = false
 visible = false
 
 [node name="pomodoro" parent="UI/top_container" instance=ExtResource( 6 )]
+visible = false
 
 [node name="bottom_bar" type="Panel" parent="UI"]
 anchor_top = 1.0
