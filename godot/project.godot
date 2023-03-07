@@ -6,12 +6,13 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
+config_version=5
 
 [application]
 
 config/name="Wellbeing App"
 run/main_scene="res://start_screen.tscn"
+config/features=PackedStringArray("4.0")
 run/low_processor_mode=true
 config/icon="res://Assets/icons/main_icon.png"
 
@@ -24,10 +25,10 @@ NodeVariables="*res://node_variables.gd"
 
 [display]
 
-window/size/width=1280
-window/size/height=720
-window/size/test_width=2560
-window/size/test_height=1440
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/window_width_override=2560
+window/size/window_height_override=1440
 window/energy_saving/keep_screen_on=false
 window/stretch/mode="2d"
 window/stretch/aspect="keep_width"
@@ -42,4 +43,4 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/defaults/default_environment="res://default_env.tres"

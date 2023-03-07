@@ -1,9 +1,9 @@
 extends CanvasLayer
 
 
-onready var node_variables = get_node("/root/NodeVariables")
-onready var ui_control = get_node("/root/UiControl")
-onready var user_values = get_node("/root/UserValues")
+@onready var node_variables = get_node("/root/NodeVariables")
+@onready var ui_control = get_node("/root/UiControl")
+@onready var user_values = get_node("/root/UserValues")
 
 
 func _ready():

@@ -1,7 +1,7 @@
 extends GridContainer
 
 
-onready var user_values = get_node("/root/UserValues")
+@onready var user_values = get_node("/root/UserValues")
 
 
 func _ready():
@@ -9,8 +9,8 @@ func _ready():
 	var birth_month_popup_menu: PopupMenu = $button_birth_month.get_popup()
 	var birth_day_popup_menu: PopupMenu = $button_birth_day.get_popup()
 	# Signal for when the user selects an PopupMenu item.
-	var _error = birth_month_popup_menu.connect("id_pressed", self, "_on_month_selected")
-	var _error2 = birth_day_popup_menu.connect("id_pressed", self, "_on_day_selected")
+	var _error = birth_month_popup_menu.connect("id_pressed",Callable(self,"_on_month_selected"))
+	var _error2 = birth_day_popup_menu.connect("id_pressed",Callable(self,"_on_day_selected"))
 	
 	if user_values.user_birth_month != 0:
 		$button_birth_month.text = str("Month " + str(user_values.user_birth_month))

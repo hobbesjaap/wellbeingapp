@@ -1,10 +1,10 @@
 extends Button
 
 
-onready var node_variables = get_node("/root/NodeVariables")
-onready var ui_control = get_node("/root/UiControl")
-onready var user_values = get_node("/root/UserValues")
-onready var user_name = get_node("%textbox_user_name")
+@onready var node_variables = get_node("/root/NodeVariables")
+@onready var ui_control = get_node("/root/UiControl")
+@onready var user_values = get_node("/root/UserValues")
+@onready var user_name = get_node("%textbox_user_name")
 
 
 func _on_button_user_save_pressed():

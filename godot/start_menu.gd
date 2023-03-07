@@ -1,8 +1,8 @@
 extends CanvasLayer
 
 
-onready var user_values = get_node("/root/UserValues")
-onready var program_values = get_node("/root/ProgramValues")
+@onready var user_values = get_node("/root/UserValues")
+@onready var program_values = get_node("/root/ProgramValues")
 
 var csv_url = "https://raw.githubusercontent.com/hobbesjaap/wellbeingapp/main/version_info.csv"
 
@@ -33,7 +33,9 @@ func update_user_name_label():
 
 
 func _on_HTTPRequest_request_completed(_result, _response_code, _headers, body):
-	var json = JSON.parse(body.get_string_from_utf8())
+	var test_json_conv = JSON.new()
+	test_json_conv.parse(body.get_string_from_utf8())
+	var json = test_json_conv.get_data()
 	program_values.web_release_version = json.result
 	if program_values.web_release_version > program_values.release_version:
 			print("There's an update!")
