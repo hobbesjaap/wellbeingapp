@@ -30,8 +30,8 @@ var err = config.load("user://user.ini")
 
 # This function can be triggered to update the known system time.
 func get_device_time():
-	date = OS.get_date()
-	date_time = OS.get_time()
+	date = Time.get_date_dict_from_system()
+	date_time = Time.get_time_dict_from_system()
 	date_time_hour = date_time.hour
 	date_month = date.month
 	date_day = date.day
