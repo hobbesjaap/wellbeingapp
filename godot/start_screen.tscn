@@ -36,9 +36,17 @@ visible = false
 
 [node name="welcome_title" parent="UI/top_container/start_menu" index="0"]
 anchors_preset = 5
+offset_top = 0.0
+offset_bottom = 34.0
+grow_horizontal = 2
 
 [node name="version_label" parent="UI/top_container/start_menu" index="2"]
 anchors_preset = 2
+offset_left = 0.0
+offset_top = -30.0
+offset_right = 1275.0
+offset_bottom = 0.0
+grow_vertical = 0
 
 [node name="button_daily_action" parent="UI/top_container/start_menu/GridContainer" index="0"]
 layout_mode = 2
@@ -63,18 +71,38 @@ visible = false
 
 [node name="user_menu" parent="UI/top_container/user_details" index="0"]
 anchors_preset = 8
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="green_panel" parent="UI/top_container/user_details/user_menu" index="0"]
 layout_mode = 2
 
 [node name="label_first_time" parent="UI/top_container/user_details/user_menu/green_panel" index="0"]
 layout_mode = 0
+anchor_right = 0.0
+offset_top = 0.0
+offset_right = 1.0
+offset_bottom = 34.0
 
 [node name="textbox_user_name" parent="UI/top_container/user_details/user_menu/green_panel" index="1"]
 layout_mode = 0
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 700.0
+offset_bottom = 34.0
 
 [node name="birthday_selector" parent="UI/top_container/user_details/user_menu/green_panel" index="2"]
 layout_mode = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 267.0
+offset_bottom = 34.0
 
 [node name="button_birth_month" parent="UI/top_container/user_details/user_menu/green_panel/birthday_selector" index="0"]
 layout_mode = 2
@@ -84,6 +112,14 @@ layout_mode = 2
 
 [node name="button_user_save" parent="UI/top_container/user_details/user_menu/green_panel" index="3"]
 layout_mode = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 148.57
+offset_bottom = 34.0
 
 [node name="daily_prompts" parent="UI/top_container" instance=ExtResource("4")]
 visible = false

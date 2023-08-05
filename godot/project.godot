@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Wellbeing App"
 run/main_scene="res://start_screen.tscn"
-config/features=PackedStringArray("4.0")
+config/features=PackedStringArray("4.1")
 run/low_processor_mode=true
 config/icon="res://Assets/icons/main_icon.png"
 
