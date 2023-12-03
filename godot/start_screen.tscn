@@ -35,36 +35,16 @@ theme = ExtResource("5")
 visible = false
 
 [node name="welcome_title" parent="UI/top_container/start_menu" index="0"]
-anchors_preset = 5
 offset_top = 0.0
 offset_bottom = 34.0
 grow_horizontal = 2
 
 [node name="version_label" parent="UI/top_container/start_menu" index="2"]
-anchors_preset = 2
 offset_left = 0.0
 offset_top = -30.0
 offset_right = 1275.0
 offset_bottom = 0.0
 grow_vertical = 0
-
-[node name="button_daily_action" parent="UI/top_container/start_menu/GridContainer" index="0"]
-layout_mode = 2
-
-[node name="button_open_github" parent="UI/top_container/start_menu/GridContainer" index="1"]
-layout_mode = 2
-
-[node name="button_email_feedback" parent="UI/top_container/start_menu/GridContainer" index="2"]
-layout_mode = 2
-
-[node name="button_name" parent="UI/top_container/start_menu/GridContainer" index="3"]
-layout_mode = 2
-
-[node name="button_update_check" parent="UI/top_container/start_menu/GridContainer" index="4"]
-layout_mode = 2
-
-[node name="button_journal" parent="UI/top_container/start_menu/GridContainer" index="5"]
-layout_mode = 2
 
 [node name="user_details" parent="UI/top_container" instance=ExtResource("2")]
 visible = false
