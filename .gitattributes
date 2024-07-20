@@ -1,2 +1,0 @@
-godot/Assets/** filter=lfs diff=lfs merge=lfs -text
-design_files/** filter=lfs diff=lfs merge=lfs -text
